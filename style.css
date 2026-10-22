@@ -344,11 +344,6 @@ body.page-main footer {
     color: #333;
 }
 
-/* =========================================
-   ЛАБОРАТОРНАЯ РАБОТА №3: Flexbox и Grid
-   ========================================= */
-
-/* --- 1. Flexbox: Навигационное меню --- */
 .main-nav {
     background-color: var(--beige-light);
     padding: 15px;
@@ -391,7 +386,7 @@ body.page-main footer {
     transform: scale(0.96);
 }
 
-/* --- 2. Flexbox: Карточки книг --- */
+
 .books-container {
     display: flex;
     flex-wrap: wrap;
@@ -460,7 +455,7 @@ body.page-main footer {
     color: #e65100;
 }
 
-/* --- 3. Grid: Галерея цитат --- */
+
 .quotes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -504,9 +499,6 @@ body.page-main footer {
     color: #6f4e37;
 }
 
-/* --- 4. Адаптивность (Медиа-запросы) --- */
-
-/* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
     .book-card {
         flex: 1 1 calc(50% - 20px);
@@ -516,7 +508,7 @@ body.page-main footer {
     }
 }
 
-/* Мобильные (до 768px) */
+
 @media (max-width: 768px) {
     .nav-list {
         flex-direction: column;
