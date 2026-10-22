@@ -38,7 +38,7 @@ if (userName === null || userName.trim() === "") {
     userName = userName.trim();
 }
 
-alert(`Здравствуйте, ${userName}! Добро пожаловать в дневник книжного червя.`);
+alert(`Здравствуйте, ${userName}! Добро пожаловать.`);
 console.log(`Пользователь: ${userName}`);
 console.log("Прочитано страниц по дням:", pagesPerDay);
 
