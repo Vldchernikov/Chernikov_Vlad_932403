@@ -12,5 +12,6 @@
 | 2 | Базовые и продвинутые возможности CSS | [ветка lab2](https://github.com/Vldchernikov/Chernikov_Vlad_932403/tree/lab2) | [index](https://raw.githack.com/Vldchernikov/Chernikov_Vlad_932403/lab2/index.html) · [вариант 10](https://raw.githack.com/Vldchernikov/Chernikov_Vlad_932403/lab2/variant10.html) |
 | 3 | Вёрстка макета с помощью Flexbox и Grid | [ветка lab3](https://github.com/Vldchernikov/Chernikov_Vlad_932403/tree/lab3) | [index](https://raw.githack.com/Vldchernikov/Chernikov_Vlad_932403/lab3/index.html) · [вариант 10](https://raw.githack.com/Vldchernikov/Chernikov_Vlad_932403/lab3/variant10.html) |
 | 4 | Основы JavaScript | [ветка lab4](https://github.com/Vldchernikov/Chernikov_Vlad_932403/tree/lab4) | [index](https://raw.githack.com/Vldchernikov/Chernikov_Vlad_932403/lab4/index.html) · [вариант 10](https://raw.githack.com/Vldchernikov/Chernikov_Vlad_932403/lab4/variant10.html) |
+| 5 | DOM и взаимодействие с элементами страницы | [ветка lab5](https://github.com/Vldchernikov/Chernikov_Vlad_932403/tree/lab5) | [index](https://raw.githack.com/Vldchernikov/Chernikov_Vlad_932403/lab5/index.html) · [вариант 10](https://raw.githack.com/Vldchernikov/Chernikov_Vlad_932403/lab5/variant10.html) |
 
 Описание каждой работы — в README соответствующей ветки.
