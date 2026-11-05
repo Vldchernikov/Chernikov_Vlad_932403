@@ -14,8 +14,8 @@
     <header>
         <h1>Черников Владислав</h1>
         <p>Группа: 932403 | Тема: Книжный червь и писатель</p>
-        
-        
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Тёмная тема</button>
+
         <nav class="main-nav" aria-label="Основная навигация">
             <ul class="nav-list">
                 <li><a href="index.html" class="menu-link">Главная</a></li>
@@ -39,47 +39,72 @@
 
        
         <section id="books">
-            <h2>Книги на полке</h2>
-            <div class="books-container">
-                <article class="book-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/ru/4/4d/The_Silmarillion_cover.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original" alt="Обложка книги Сильмариллион" class="book-cover">
-                    <div class="book-info">
-                        <h3 class="book-title">Сильмариллион</h3>
-                        <p class="book-author">Дж. Р. Р. Толкин</p>
-                        <span class="book-status status-read">Прочитано</span>
+            <div class="section-header">
+                <h2>Книги на полке</h2>
+                <button type="button" class="toggle-btn" data-toggle-target="books-content" aria-controls="books-content" aria-expanded="true">Скрыть книги</button>
+            </div>
+            <div id="books-content" class="collapsible">
+                <form id="add-book-form" class="add-book-form" novalidate>
+                    <div class="add-book-fields">
+                        <div>
+                            <label for="book-title-input">Название:</label>
+                            <input type="text" id="book-title-input" name="title" placeholder="Например, Хоббит">
+                        </div>
+                        <div>
+                            <label for="book-author-input">Автор:</label>
+                            <input type="text" id="book-author-input" name="author" placeholder="Например, Дж. Р. Р. Толкин">
+                        </div>
                     </div>
-                </article>
-                <article class="book-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK4kh7wORQ3rQDLVpAuADj3VX-5eYlZTE39KSzdbffmaMMaa4uB6hM2k5aJb9C6EcKd74MVw-7lcCHa94qjS3_JPbyNIN8bSxL5C5cfFVL&s=10" alt="Обложка книги Бегущий в лабиринте" class="book-cover">
-                    <div class="book-info">
-                        <h3 class="book-title">Бегущий в лабиринте</h3>
-                        <p class="book-author">Джеймс Дэшнер</p>
-                        <span class="book-status status-progress">В процессе</span>
+                    <div class="add-book-actions">
+                        <button type="submit" id="add-book-btn">Добавить книгу</button>
+                        <button type="button" id="remove-book-btn" class="btn-secondary">Удалить последнюю</button>
                     </div>
-                </article>
-                <article class="book-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7g9VuDDWb901aBTRwEC2ImHGdXOkKXaYEPVpfD-JjAA&s=10" alt="Обложка книги Ведьмак" class="book-cover">
-                    <div class="book-info">
-                        <h3 class="book-title">Ведьмак</h3>
-                        <p class="book-author">Анджей Сапковский</p>
-                        <span class="book-status status-read">Прочитано</span>
-                    </div>
-                </article>
-                <article class="book-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSaSPRiCWGMpCGpwuOHfXTZ4UsGZSzoqEfd9uzXMRKXQ&s=10" alt="Обложка книги Хроники Амбера" class="book-cover">
-                    <div class="book-info">
-                        <h3 class="book-title">Хроники Амбера</h3>
-                        <p class="book-author">Роджер Желязны</p>
-                        <span class="book-status status-progress">В процессе</span>
-                    </div>
-                </article>
+                    <p id="book-message" class="book-message" role="status" aria-live="polite"></p>
+                </form>
+                <p id="books-count" class="books-count">Книг на полке: 4</p>
+                <div id="books-container" class="books-container">
+                    <article class="book-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/ru/4/4d/The_Silmarillion_cover.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original" alt="Обложка книги Сильмариллион" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">Сильмариллион</h3>
+                            <p class="book-author">Дж. Р. Р. Толкин</p>
+                            <button type="button" class="read-btn is-read" aria-pressed="true">Прочитано ✓</button>
+                        </div>
+                    </article>
+                    <article class="book-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK4kh7wORQ3rQDLVpAuADj3VX-5eYlZTE39KSzdbffmaMMaa4uB6hM2k5aJb9C6EcKd74MVw-7lcCHa94qjS3_JPbyNIN8bSxL5C5cfFVL&s=10" alt="Обложка книги Бегущий в лабиринте" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">Бегущий в лабиринте</h3>
+                            <p class="book-author">Джеймс Дэшнер</p>
+                            <button type="button" class="read-btn" aria-pressed="false">Прочитано</button>
+                        </div>
+                    </article>
+                    <article class="book-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7g9VuDDWb901aBTRwEC2ImHGdXOkKXaYEPVpfD-JjAA&s=10" alt="Обложка книги Ведьмак" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">Ведьмак</h3>
+                            <p class="book-author">Анджей Сапковский</p>
+                            <button type="button" class="read-btn is-read" aria-pressed="true">Прочитано ✓</button>
+                        </div>
+                    </article>
+                    <article class="book-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSaSPRiCWGMpCGpwuOHfXTZ4UsGZSzoqEfd9uzXMRKXQ&s=10" alt="Обложка книги Хроники Амбера" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">Хроники Амбера</h3>
+                            <p class="book-author">Роджер Желязны</p>
+                            <button type="button" class="read-btn" aria-pressed="false">Прочитано</button>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        
         <section id="quotes">
-            <h2>Цитаты недели</h2>
-            <div class="quotes-grid">
+            <div class="section-header">
+                <h2>Цитаты недели</h2>
+                <button type="button" class="toggle-btn" data-toggle-target="quotes-content" aria-controls="quotes-content" aria-expanded="true">Скрыть цитаты</button>
+            </div>
+            <div id="quotes-content" class="quotes-grid collapsible">
                 <blockquote class="quote-card">
                     <p class="quote-text">«Не все то золото, что блестит».</p>
                     <footer class="quote-footer">
